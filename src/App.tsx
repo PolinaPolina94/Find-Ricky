@@ -1,12 +1,11 @@
-import './App.css'
-import SearchInput from './components/SearchInput/SearchInput'
+import SearchInput from "./components/SearchInput/SearchInput";
 
 function App() {
   return (
     <>
-    <SearchInput />     
+      <SearchInput />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

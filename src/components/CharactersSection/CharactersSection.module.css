@@ -1,0 +1,51 @@
+.wrapper {
+    margin-top: 67px;
+    max-width: 1596px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    background-color: white;
+    padding: 20px 34px 30px;
+    box-shadow: 0 4px 6px rgba(100, 100, 111, 0.2);
+    flex: 1 1 25%;
+}
+
+.name {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: 'MontserratFontRegular', sans-serif;
+    font-size: 14px;
+    color: #767676;
+}
+
+.details b {
+    font-weight: 700;
+    color: green;
+}
+
+.wrapper .card:nth-child(1),
+.wrapper .card:nth-child(2) {
+    flex: 1 1 30%;
+    height: 262px;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.nofound {
+    font-size: 18px;
+    font-weight: 700;
+    color: #656EC2
+}

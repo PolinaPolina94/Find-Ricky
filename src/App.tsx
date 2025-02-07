@@ -1,9 +1,9 @@
-import SearchInput from "./components/SearchInput/SearchInput";
+import SearchSection from "./components/SearchSection/SearchSection";
 
 function App() {
   return (
     <>
-      <SearchInput />
+    <SearchSection/>
     </>
   );
 }

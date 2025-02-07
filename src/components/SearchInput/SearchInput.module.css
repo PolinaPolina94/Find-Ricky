@@ -1,8 +1,5 @@
 .inputWrapper {
-    position: absolute;
-    top: 128px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 128px;
     text-align: left;
 }
 
@@ -36,7 +33,6 @@
 @media screen and (max-width: 320px) {
     .inputWrapper {
         width: 90%;
-        left: 5%;
     }
 
     .input {

@@ -13,7 +13,6 @@ const CharactersSection: FC<Props> = ({ loading, characters }) => {
   return (
     <div className={styles.wrapper}>
       {loading ? (
-        // add style
         <div style={{ width: 100, height: 100 }}>
           <Loader />
         </div>
@@ -21,7 +20,7 @@ const CharactersSection: FC<Props> = ({ loading, characters }) => {
         <>
           {characters?.length ? (
             characters?.map((item: Character) => (
-              <CharacterCard character={item} />
+              <CharacterCard character={item} key={item.id}/>
             ))
           ) : (
             <div className={styles.nofound}> No characters </div>

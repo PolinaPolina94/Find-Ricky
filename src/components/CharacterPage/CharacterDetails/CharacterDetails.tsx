@@ -4,6 +4,7 @@ import styles from "./CharacterDetails.module.css";
 import { convertDate } from "../../../servises/convertDate";
 import { Loader } from "../../../loader";
 import { useNavigate } from "react-router-dom";
+import { InfoSvg } from "../../../servises/icons";
 
 type Props = {
   details?: Character | null;
@@ -18,10 +19,8 @@ const CharacterDetails: FC<Props> = ({ details, loading }) => {
   return (
     <div className={styles.wrapper}>
       <button className={styles.btn} onClick={handleGoBack}>
-        {" "}
-        Go back{" "}
+        GO BACK
       </button>
-
       <div className={styles.card} style={{ opacity: loading ? "0.5" : "1" }}>
         {loading ? (
           <Loader />
@@ -51,6 +50,9 @@ const CharacterDetails: FC<Props> = ({ details, loading }) => {
             <span>CREATED:</span> {convertDate(details?.created as string)}
           </li>
         </ul>
+      </div>
+      <div className={styles.myInfo}>
+        <InfoSvg />
       </div>
     </div>
   );

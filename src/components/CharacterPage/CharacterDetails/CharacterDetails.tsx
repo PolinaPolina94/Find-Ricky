@@ -1,10 +1,11 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Character } from "../../CharactersSection/type";
 import styles from "./CharacterDetails.module.css";
 import { convertDate } from "../../../servises/convertDate";
 import { Loader } from "../../../loader";
 import { useNavigate } from "react-router-dom";
 import { InfoSvg } from "../../../servises/icons";
+import InfoModal from "./InfoModal/InfoModal";
 
 type Props = {
   details?: Character | null;
@@ -16,6 +17,11 @@ const CharacterDetails: FC<Props> = ({ details, loading }) => {
   const handleGoBack = () => {
     navigate(-1);
   };
+  const [show, setShow] = useState(false)
+  const showMyInfo = () => {
+    setShow(!show)
+  }
+
   return (
     <div className={styles.wrapper}>
       <button className={styles.btn} onClick={handleGoBack}>
@@ -51,9 +57,10 @@ const CharacterDetails: FC<Props> = ({ details, loading }) => {
           </li>
         </ul>
       </div>
-      <div className={styles.myInfo}>
+      <div className={styles.myInfo} onClick={showMyInfo}>
         <InfoSvg />
       </div>
+        {show && <InfoModal setShow={setShow}/>}
     </div>
   );
 };

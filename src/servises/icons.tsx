@@ -6,7 +6,7 @@ export const InfoSvg = () => {
       viewBox="0 0 48 48"
       version="1"
       xmlns="http://www.w3.org/2000/svg"
-      enable-background="new 0 0 48 48"
+      enableBackground="new 0 0 48 48"
     >
       <circle fill="#2196F3" cx="24" cy="24" r="21" />
       <rect x="22" y="22" fill="#ffffff" width="4" height="11" />
@@ -25,7 +25,7 @@ export const LinkedinSvg = () => {
       width="24px"
       height="24px"
       viewBox="0 0 32 32"
-      enable-background="new 0 0 32 32"
+      enableBackground="new 0 0 32 32"
       xmlSpace="preserve"
     >
       <g>
